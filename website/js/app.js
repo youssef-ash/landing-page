@@ -5,6 +5,16 @@ const navList = document.getElementById('navbar__list');
 
 // Helper Functions 
 
+function isInViewport(element) {
+    const cords = element.getBoundingClientRect();
+    return (
+        cords.top >= 0 &&
+        cords.left >= 0 &&
+        cords.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        cords.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
 // Main Functions
 
 // creates nav bar dynamically
@@ -20,3 +30,13 @@ function createNavBar() {
 // Events
 
 createNavBar();
+
+document.addEventListener('scroll', () => {
+    sections.forEach(section => {
+        if (isInViewport(section.firstElementChild.firstElementChild.nextElementSibling)) {
+            section.classList.add("active")
+        } else {
+            section.classList.remove("active")
+        }
+    })
+})
