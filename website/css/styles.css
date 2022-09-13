@@ -123,6 +123,10 @@ section {
     color: white;
 }
 
+.navbar__elements.active {
+    background: black;
+}
+
 /* Header Styles */
 .page__header {
     background: #fff;
