@@ -1,4 +1,8 @@
-/* ---- Base Rules ---- */
+/* ---- Variables ---- */
+:root {
+    --gray: #333
+}
+/* Base Rules */
 html {
     scroll-behavior: smooth;
 }
@@ -10,19 +14,20 @@ body {
     color: #fff;
 }
 
-/* Typeography General*/
+/* Typeography General */
 h1 {
     font-family: 'Fira Sans', sans-serif;
     font-size: 4.5rem;
-    margin: 160px 64px 32px 64px;
+    margin: 2em 5rem 1em;
 }
 
-/* @media only screen and (min-width: 35em){
+@media only screen and (min-width: 35em){
     h1 {
         font-size: 4.5rem;
-        margin: 2em 4rem 1em;
+        margin: 160px 64px 32px 64px;
+
     }
-} */
+}
 
 h2 {
     border-bottom: 1px solid white;
@@ -53,9 +58,9 @@ section {
 
 /* ---- Module Rules ---- */
 
-/* Navigation Styles*/
+/* Navigation Styles */
 #navbar__menu {
-    background-color: #333;
+    background-color: var(--gray);
     display: flex;
 }
 
@@ -66,7 +71,7 @@ section {
     margin: 0;
     padding: 0;
     list-style-type: none;
-    transition: ease 0.3s all;
+    transition: all 0.3s;
 }
 
 .collapsed {
@@ -77,9 +82,9 @@ section {
 .button {
     height: 50px;
     width: 50px;
-    background-color: #333;
+    background-color: var(--gray);
     color: white;
-    transition: ease 0.3s all;
+    transition: all 0.3s;
     border: none;
 }
 
@@ -107,7 +112,7 @@ section {
     width: 105px;
     font-family: 'Oxygen', Sans-Serif;
     font-weight: bold;
-    transition: ease 0.3s all;
+    transition: all 0.3s;
 }
 
 .navbar__elements:hover {
@@ -125,6 +130,27 @@ section {
 
 .navbar__elements.active {
     background: black;
+}
+
+#scroll__to__top {
+    visibility: hidden;
+    opacity: 0;
+    background-color: var(--gray);
+    color: white;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.626);
+    transition: all 0.3s;
+}
+
+#scroll__to__top:hover {
+    cursor: pointer;
+    background: #222;
 }
 
 /* Header Styles */
@@ -179,7 +205,7 @@ section:nth-of-type(odd) .landing__container::before {
     height: 20vh;
     border-radius: 50%;
     opacity: 0;
-    transition: ease 0.5s all;
+    transition: all 0.5s;
 }
 
 section:nth-of-type(even) .landing__container::before {
@@ -194,7 +220,7 @@ section:nth-of-type(even) .landing__container::before {
     height: 10vh;
     border-radius: 50%;
     opacity: 0;
-    transition: ease 0.5s all;
+    transition: all 0.5s;
 }
 
 section:nth-of-type(3n) .landing__container::after {
@@ -209,7 +235,7 @@ section:nth-of-type(3n) .landing__container::after {
     height: 10vh;
     border-radius: 50%;
     opacity: 0;
-    transition: ease 0.5s all;
+    transition: all 0.5s;
 }
 
 section:nth-of-type(3n + 1) .landing__container::after {
@@ -224,7 +250,7 @@ section:nth-of-type(3n + 1) .landing__container::after {
     height: 15vh;
     border-radius: 50%;
     opacity: 0;
-    transition: ease 0.5s all;
+    transition: all 0.5s;
 }
 
 
