@@ -48,9 +48,9 @@ function setActive() {
 // updates nav bar link text with corresponding section title
 function updateNavText() {
     titles.forEach(title => {
-        let sectionId = title.parentElement.parentElement.id
-        let navbarLink = document.getElementById(`nav__${sectionId}`)
-        navbarLink.innerHTML = title.innerHTML
+        let sectionId = title.parentElement.parentElement.id;
+        let navbarLink = document.getElementById(`nav__${sectionId}`);
+        navbarLink.innerHTML = title.innerHTML;
     })
 }
 
@@ -60,7 +60,7 @@ function createNewSection() {
     let number = sections.length + 1;
 	const content = document.querySelector('main');
     const newSection = document.createElement('section');
-    const title = `<h2 contentEditable='true' id='title${number}'>Section ${number}</h2>`
+    const title = `<h2 contentEditable='true' id='title${number}'>Section ${number}</h2>`;
     const newListItem = document.createElement('li');
     
     // sets atrributes and fills content in new section
