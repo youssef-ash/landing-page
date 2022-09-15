@@ -38,7 +38,6 @@ function setActive() {
         let sectionParagraph = section.firstElementChild.firstElementChild.nextElementSibling;
         let sectionId = section.id;
         let navElement = document.getElementById(`nav__${sectionId}`).parentElement;
-
         isInViewport(sectionParagraph) ? 
         (section.classList.add('active'), navElement.classList.add('active')) :
         (section.classList.remove('active'), navElement.classList.remove('active'))

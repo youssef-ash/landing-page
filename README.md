@@ -14,3 +14,7 @@ This is a landing page template project.
 All dependencies needed for development can be installed by running `npm install`
 
 A local development server can be started by running `npm run start`
+
+## **Mock-Ups**
+
+![](/mock-ups/landing-page-mock-up.png)
