@@ -1,10 +1,12 @@
 // Global Variables
 
-let sections = Array.from(document.getElementsByTagName('section'));
 let titles = Array.from(document.getElementsByTagName('h2'));
+let sections = Array.from(document.getElementsByTagName('section'));
+
 const navList = document.getElementById('navbar__list');
-const addSectionButton = document.getElementById('navbar__add');
 const expandNavbarButton = document.getElementById('navbar__expand');
+const addSectionButton = document.getElementById('navbar__add');
+
 const scrollToTopButton = document.getElementById('scroll__to__top');
 
 // Helper Functions
